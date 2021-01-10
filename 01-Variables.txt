@@ -1,0 +1,56 @@
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+
+Sub variables_implicitas()
+
+'Declaramos la variable y asignamos su valor.
+   valor1 = "soy 10"
+   edad = 30
+   edad = "treinta"
+End Sub
+
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+'************UTILIZAR OPTION EXPLICIT EN LA PARTE SUPERIOR DEL MÓDULO******* Y/O ACTIVAR REQUERIR DECLARACIÓN DE VARIABLES
+
+Sub variables_explicitas()
+
+'DECLARAMOS VARIABLES
+
+' Dim nombreVariable As Tipo de dato
+
+Dim nombre As String
+
+Dim edad As Byte
+Dim anho_ingreso As Integer
+Dim saldo As Double
+
+Dim tarjeta As Boolean
+
+Dim lo_que_sea As Variant
+
+'*No puedes declarar una variable y asignar valor en la misma línea.
+
+
+'ASIGNAMOS VALORES
+
+    nombre = "Paco"
+
+    edad = 23
+    anho_ingreso = 2019.2
+    saldo = 3400.34343432333
+
+    tarjeta = False
+
+    lo_que_sea = 20 & "numeros"
+
+
+'Utilizamos Debug.Print para mostrar texto
+
+Debug.Print anho_ingreso
+
+End Sub

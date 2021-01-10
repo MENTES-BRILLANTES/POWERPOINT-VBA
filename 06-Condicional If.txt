@@ -1,0 +1,82 @@
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+Sub primera_condicion_si()
+
+Dim edad As Byte
+
+'Si mi edad es mayor que 18 años, entonces estás apto.
+'Pedir valores utilizando InputBox
+
+edad = Val(InputBox("Ingresa tu edad"))
+
+
+
+If edad > 18 Then
+    MsgBox "Cumples esta condición."
+Else
+    MsgBox "No cumples esta condición"
+End If
+
+MsgBox "Estoy fuera de la condicional"
+
+End Sub
+
+
+Sub segunda_condicion_si()
+
+Dim edad As Byte
+
+
+'Si mi edad es menor que 18 años, entonces estás apto.
+'Si mi edad es mayor o igual que 18 años, entonces NO estás apto.
+'Si mi edad es mayor que 65 años, entonces eres adulto mayor.
+
+'Pedir valores utilizando InputBox
+
+edad = CInt(InputBox("Ingresa tu edad"))
+
+
+If edad < 18 Then
+    MsgBox "NO APTO"
+ElseIf edad >= 18 And edad < 65 Then ' introducir Operadores lógicos
+    MsgBox "APTO"
+ElseIf edad >= 65 Then
+    MsgBox "Ya eres adulto mayor"
+End If
+
+
+End Sub
+
+Sub tercera_condicion_si()
+
+Dim color1 As String
+Dim color2 As String
+Dim escritura As String
+
+escritura = InputBox("Tienes 2 opciones : " & "rojo ; verde")
+
+color1 = "rojo"
+color2 = "verde"
+
+'Para no distinguir entre Mayusc/minusc...
+escritura = LCase(escritura)
+
+If color1 = escritura Then
+    MsgBox "Te gusta el color " & escritura
+ElseIf color2 = escritura Then
+    MsgBox "Te gusta el color " & escritura
+Else
+    MsgBox "No te gustan estos colores :("
+End If
+
+End Sub
+
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''

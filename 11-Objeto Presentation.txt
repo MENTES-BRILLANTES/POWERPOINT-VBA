@@ -1,0 +1,79 @@
+Option Explicit
+
+Sub IdentificarPresentaciones()
+
+'Identificar presentación
+
+'*Nombre presentation
+    'Debug.Print ActivePresentation.Name
+'Identificar por nombre
+
+'Debug.Print Presentations(ActivePresentation.Name).Name
+
+'*Por índice
+   Debug.Print Presentations(4).Name
+
+End Sub
+
+Sub crearPresentación()
+'-----------------------------------------------------------------------------------
+'Crear un archivo ppt
+    Presentations.Add
+'-----------------------------------------------------------------------------------
+End Sub
+
+Sub cerrarPresentación()
+
+    Dim i As Byte
+    i = 1
+
+Do Until Presentations.Count = 1
+    If Presentations(i).Name <> "02-PRESENTATION.pptm" Then
+        Presentations(i).Close
+    End If
+    i = 2
+Loop
+
+End Sub
+Sub datosPresentation()
+
+'Ruta:
+Debug.Print ActivePresentation.Path
+
+'Nombre completo:
+Debug.Print ActivePresentation.FullName
+
+End Sub
+
+Sub guardarPresentation()
+
+'--------------------------------------------------------------------------------------
+'GUARDAR
+'--------------------------------------------------------------------------------------
+'Presentations.Add
+'ActivePresentation.Save
+'Debug.Print ActivePresentation.Path
+'--------------------------------------------------------------------------------------
+'GUARDAR COMO
+'--------------------------------------------------------------------------------------
+'Como presentación, versiones antiguas
+'ActivePresentation.SaveAs "Archivo Guardado por defecto", ppSaveAsDefault
+
+'Debug.Print Presentations(2).Path
+'
+''Habilitado para macros
+Presentations.Add
+
+ActivePresentation.SaveAs "Archivo habilitado para macros", ppSaveAsOpenXMLPresentationMacroEnabled
+
+''Como presentación, versiones antiguas
+ActivePresentation.SaveAs "Archivo Guardado de power 2007-2003", ppSaveAsPresentation
+
+End Sub
+
+Sub cerrarPresentation()
+
+Presentations(2).Close
+
+End Sub
+

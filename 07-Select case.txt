@@ -1,0 +1,59 @@
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+
+Sub calificaciones()
+
+Dim nota As Integer
+
+nota = 100
+
+Select Case nota
+
+    Case Is <= 10
+        MsgBox "Aprobado"
+    Case Is >= 20
+        MsgBox "Desaprobado"
+
+End Select
+
+
+End Sub
+
+
+Sub seleccionar_casos()
+
+Dim mi_edad
+
+mi_edad = Val(InputBox("Escribe tu edad"))
+
+Select Case mi_edad
+    Case Is <= 7
+        MsgBox "No cumples la edad suficiente para alguna categoría"
+        MsgBox "Nos vemos"
+    Case 8, 9, 10
+        MsgBox "tienes 8 a 10 años"
+    Case Is <= 12
+        MsgBox "Eres estudiante de nivel primario"
+    Case Is <= 16
+        MsgBox "Eres estudiante de nivel secundario"
+    Case Is <= 20
+        MsgBox "Cursas la preparatoria"
+    Case Is <= 26
+        MsgBox "Eres estudiante de nivel universitario"
+    Case Is <= 28
+        MsgBox "Eres estudiante de maestría"
+    Case Is <= 30
+        MsgBox "Eres estudiante de doctorado"
+    Case Is <= 35
+        MsgBox "Eres estudiante de postdoctorado"
+    Case Else
+        MsgBox "Sin asignación"
+End Select
+
+End Sub
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
